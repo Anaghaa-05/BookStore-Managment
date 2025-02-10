@@ -1,0 +1,41 @@
+TODO:
+- How to create a C array of measures, or a C++ vector of measures,
+  using the values contained in an Eigen Vector or and Eigen Matrix, or a C array of numbers, or a C++ vector of numbers?
+- Which operations can I do with an Eigen Vector o Matrix containing a measure?
+- Improve comments inside "measures.hpp".
+- Complete Tutorial, in particular:
+  - Describe possible conversions between kinds of measure.
+  - Add some examples of interface with Eigen.
+- Complete Motivation.
+- Complete Reference, in particular:
+  - Add many examples of custom definitions.
+- Complete tests.
+- Rewrite static_checker using LLVM.
+- Read document about open source software development.
+- When completed, add Motivation as an article of CodeProject and as an article of http://www.academia.edu/.
+- Search for units-related articles and then add announcement on C++ forums:
+     http://programmers.stackexchange.com/questions/197416/data-structure-for-accessing-units-of-measure
+     http://www.codeguru.com/cpp/
+     http://www.dreamincode.net/forums/forum/168-c-articles-and-news/
+     http://www.cplusplus.com/articles/
+     http://www.cprogramming.com/articles.html
+     http://www.informit.com/articles/index.aspx?st=60233
+     http://www.codeproject.com/KB/cpp/
+     - http://www.codeproject.com/Articles/791511/Units-of-measurement-types-in-Cplusplus-Using-comp
+- add documentation specifying how to set and run tests
+- test under linux with gcc and clang
+- test quaternions and complex numbers.
+- possibly allow mixed types in assignment operators (like vect1<inches,float>(3) += vect1<inches,double>(4))
+- write a script that extracts source code from the Tutorial, compiles and runs it, and checks its output.
+- write classes linear_transformation2, linear_transformation3, affine_transformation2, affine_transformation3, and
+  corresponding functions "transformed_by" in vect2, vect3, point2, point3.
+  Their member functions are:
+  methods for vect2, point2, vect3, point3:
+  coeff(int row, int column) const, coeff(int row, int column), combine, invert
+  factory methods for vect2:  rotation, projection, reflection, scaling
+  factory methods for point2: translation, rotation, projection, reflection, scaling
+  factory methods for vect3:  rotation, projection_onto_line, projection_onto_plane,
+  reflection_over_line, reflection_over_plane, scaling
+  factory methods for point3: translation, rotation, projection_onto_line, projection_onto_plane,
+  reflection_over_line, reflection_over_plane, scaling
+- Combine this library with some open source physics engine.
